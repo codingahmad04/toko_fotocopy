@@ -11,18 +11,56 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Toko Fotocopy</a>
-            <!-- Tambahkan menu navigasi di sini -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Transactions</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main class="container">
+
+    <main class="container mt-4">
         <h1>Selamat datang di Toko Fotocopy</h1>
-        <!-- Konten utama di sini -->
+
+        <form id="transactionForm">
+            <div class="form-group">
+                <label for="customerName">Nama Pelanggan</label>
+                <input type="text" class="form-control" id="customerName" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Layanan</label>
+                <input type="text" class="form-control" id="service" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Jumlah</label>
+                <input type="number" class="form-control" id="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="total">Total</label>
+                <input type="number" class="form-control" id="total" step="0.01" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah Transaksi</button>
+        </form>
+
+        <h2 class="mt-4">Daftar Transaksi</h2>
+        <div id="transactionsList"></div>
     </main>
-    <footer class="footer">
+
+    <footer class="footer mt-4">
         <p>&copy; 2024 Toko Fotocopy</p>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

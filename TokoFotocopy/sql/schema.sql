@@ -1,8 +1,8 @@
 CREATE TABLE transaksi (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nama_pelanggan VARCHAR(100),
-    layanan VARCHAR(100),
-    jumlah INT,
-    total DECIMAL(10, 2),
+    nama_pelanggan VARCHAR(100) NOT NULL,
+    layanan VARCHAR(100) NOT NULL,
+    jumlah INT NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
     tanggal TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
